@@ -24,4 +24,4 @@ const bookmarks = [
   }
 ];
 
-module.exports = { bookmarks, bookmarks2 };
+module.exports = { bookmarks };

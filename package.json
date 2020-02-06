@@ -1,8 +1,8 @@
 {
-  "name": "express-boilerplate",
+  "name": "bookmark-server",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "src/server.js",
   "scripts": {
     "test": "mocha --require test/setup.js",
     "dev": "nodemon src/server.js",
@@ -21,6 +21,7 @@
     "helmet": "^3.21.2",
     "morgan": "^1.9.1",
     "uuid": "^3.4.0",
+    "valid-url": "^1.0.9",
     "winston": "^3.2.1"
   },
   "devDependencies": {
