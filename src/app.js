@@ -8,6 +8,7 @@ const bookmarksRouter = require('./bookmark-router/bookmark-router');
 const errorHandler = require('./errorHandler');
 
 const { NODE_ENV } = require('./config');
+console.log(NODE_ENV);
 const morganOption = NODE_ENV === 'production' ? 'tiny' : 'common';
 
 const app = express();
