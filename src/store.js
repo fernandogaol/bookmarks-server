@@ -20,7 +20,7 @@ const bookmarks = [
     title: 'MDN',
     url: 'https://developer.mozilla.org',
     description: 'The only place to find web documentation',
-    rating: 5
+    rating: 1
   }
 ];
 

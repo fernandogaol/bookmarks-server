@@ -17,8 +17,7 @@ app.use(helmet());
 app.use(cors());
 app.use(validateBearerToken);
 
-// console.log(bookmarksRouter);
-app.use('/bookmarks', bookmarksRouter);
+app.use('/api/bookmarks', bookmarksRouter);
 
 app.get('/', (req, res) => {
   res.send('Welcome to the bookmark API!');
