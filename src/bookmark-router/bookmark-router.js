@@ -1,7 +1,6 @@
 const express = require('express');
 const logger = require('../logger');
 const uuid = require('uuid/v4');
-const store = require('../store');
 const { isWebUri } = require('valid-url');
 const { getBookmarkValidationError } = require('./bookmark-validator');
 
@@ -16,7 +15,6 @@ const serializeBookmark = bookmark => ({
   description: bookmark.description,
   rating: Number(bookmark.rating)
 });
-
 bookmarksRouter
   .route('/')
   .get((req, res, next) => {
@@ -80,7 +78,6 @@ bookmarksRouter
     BookmarksService.deleteBookmark(req.app.get('db'), bookmark_id)
       .then(numRowsAffected => {
         logger.info(`Bookmark with id${bookmark_id} deleted.`);
-        res.send(`Bookmark ID:${bookmark_id} deleted`);
         res.status(204).end();
       })
       .catch(next);
@@ -110,7 +107,6 @@ bookmarksRouter
       bookmarkToUpdate
     )
       .then(numRowsAffected => {
-        res.send(`Bookmark ID ${req.params.bookmark_id} has been updated`);
         res.status(204).end();
         logger.info(`Bookmark with id ${req.params.bookmark_id} updated.`);
       })
