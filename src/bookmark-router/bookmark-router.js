@@ -39,7 +39,7 @@ bookmarksRouter
     const error = getBookmarkValidationError(newBookmark);
     if (error) return res.status(400).send(error);
 
-    if (error) return res.status(400).send(error);
+
 
     BookmarksService.insertBookmark(req.app.get('db'), newBookmark)
       .then(bookmark => {
